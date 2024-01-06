@@ -12,8 +12,20 @@
 <body>
     <div id="game-board"></div>
     <div id="control-panel">
-        <label class="setting-labels" for="snake-speed">Snake Speed: </label>
-        <input type="range" id="snake-speed" min="0" max="100" value="50" oninput="updateValue(this.value)">
+        <div class="slider-container">
+            <label class="slider-labels" for="snake-speed">Snake Speed: <span class="slider-value">5</span></label>
+            <input type="range" id="snake-speed" min="1" max="300" value="5" class="slider">
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-labels" for="expansion-rate">Expansion Rate: <span class="slider-value">1</span></label>
+            <input type="range" id="expansion-rate" min="1" max="100" value="1" class="slider">
+        </div>
+
+        <div class="slider-container">
+            <label class="slider-labels" for="grid-size">Grid Size: <span class="slider-value">21</span></label>
+            <input type="range" id="grid-size" min="1" max="301" value="21" step="2" class="slider">
+        </div>
     </div>
 </body>
 

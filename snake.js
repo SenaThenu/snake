@@ -1,7 +1,6 @@
 import { getInputDirection } from "./input.js";
 
-export const SNAKE_SPEED = 5; // how many squares the snake moves per second!
-const snakeBody = [{ x: 11, y: 11 }];
+let snakeBody = [{ x: 11, y: 11 }];
 let newSegments = 0;
 
 function expandSnake() {
@@ -54,4 +53,11 @@ export function getSnakeHead() {
 
 export function snakeIntersection() {
     return onSnake(snakeBody[0], { ignoreHead: true });
+}
+
+export function resetSnakeBody() {
+    let gridSize = parseFloat(document.getElementById("grid-size").value);
+    console.log(gridSize);
+    snakeBody = [{ x: (gridSize + 1) / 2, y: (gridSize + 1) / 2 }];
+    console.log(snakeBody);
 }

@@ -2,12 +2,11 @@ import { addSegments, onSnake } from "./snake.js";
 import { randomGridPosition } from "./grid.js";
 
 let food = getRandomFoodPosition();
-const EXPANSION_RATE = 5;
 
-export function update() {
+export function update(expansion_rate) {
     if (onSnake(food)) {
         console.log("Snake's on the food!");
-        addSegments(EXPANSION_RATE);
+        addSegments(expansion_rate);
         food = getRandomFoodPosition();
     }
 }
@@ -18,6 +17,11 @@ export function draw(gameBoard) {
     foodElement.style.gridColumnStart = food.x;
     foodElement.classList.add("food");
     gameBoard.appendChild(foodElement);
+}
+
+export function forceUpdateFoodPosition() {
+    /* This is used to update the food position when changing the grid size */
+    food = getRandomFoodPosition();
 }
 
 function getRandomFoodPosition() {

@@ -1,4 +1,7 @@
-const GRID_SIZE = 21;
+import { resetSnakeBody } from "./snake.js";
+import { forceUpdateFoodPosition } from "./food.js";
+
+let GRID_SIZE = 21;
 
 export function randomGridPosition() {
     return {
@@ -15,4 +18,13 @@ export function outsideGrid(head) {
     } else {
         return false;
     }
+}
+
+export function updateGridSize(newSize) {
+    GRID_SIZE = newSize;
+    let gameBoard = document.getElementById("game-board");
+    gameBoard.style.gridTemplateColumns = `repeat(${GRID_SIZE}, auto)`;
+    gameBoard.style.gridTemplateRows = `repeat(${GRID_SIZE}, auto)`;
+    resetSnakeBody();
+    forceUpdateFoodPosition();
 }
