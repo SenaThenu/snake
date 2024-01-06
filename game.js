@@ -10,7 +10,7 @@ import { update as foodUpdate, draw as foodDraw } from "./food.js";
 import { outsideGrid, updateGridSize } from "./grid.js";
 
 // Main Game Variables
-let SNAKE_SPEED = 5; // how many squares the snake moves per second!
+let SNAKE_SPEED = 7; // how many squares the snake moves per second!
 let EXPANSION_RATE = 1; // how many squares the snake gains per food item!
 
 // Adding event listeners to modify main game variables

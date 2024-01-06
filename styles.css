@@ -4,11 +4,7 @@
     --h1-font-size: 2.4rem;
     --h2-font-size: 2rem;
     --p-font-size: 1.4rem;
-    --food-icon: "";
-    --snake-head-icon: "";
-    --snake-body-icon: "";
 }
-
 
 *,
 *::after,
@@ -30,7 +26,7 @@ body {
     background-color: black;
 }
 
-#contorl-panel {
+#control-panel {
     order: 1;
     display: flex;
     flex-direction: column;
@@ -48,15 +44,90 @@ body {
 }
 
 input[type="range"] {
-    width: 90%;
+    width: 100%;
 }
 
 .snake {
-    background-color: hsl(200, 100%, 50%);
-    border: .25vmin solid black;
+    background-image: url("assets/body.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.head-up {
+    background-image: url("assets/head-up.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.head-down {
+    background-image: url("assets/head-bottom.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.head-right {
+    background-image: url("assets/head-right.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.head-left {
+    background-image: url("assets/head-left.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .food {
-    background-color: hsl(50, 100%, 50%);
-    border: .25vmin solid black;
+    background-image: url("assets/food.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.9s ease-in-out;
+    animation: pulsate 1.2s ease-in-out infinite;
+}
+
+.tail-up {
+    background-image: url("assets/tail-up.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tail-down {
+    background-image: url("assets/tail-bottom.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tail-right {
+    background-image: url("assets/tail-right.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tail-left {
+    background-image: url("assets/tail-left.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
