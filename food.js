@@ -5,7 +5,6 @@ let food = getRandomFoodPosition();
 
 export function update(expansion_rate) {
     if (onSnake(food)) {
-        console.log("Snake's on the food!");
         addSegments(expansion_rate);
         food = getRandomFoodPosition();
     }

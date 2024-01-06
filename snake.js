@@ -2,6 +2,7 @@ import { getInputDirection } from "./input.js";
 
 let snakeBody = [{ x: 11, y: 11 }];
 let newSegments = 0;
+let inputDir;
 
 function expandSnake() {
     for (let i = 0; i < newSegments; i++) {
@@ -13,7 +14,7 @@ function expandSnake() {
 export function update() {
     expandSnake();
 
-    let inputDir = getInputDirection();
+    inputDir = getInputDirection();
 
     for (let i = snakeBody.length - 2; i >= 0; i--) {
         snakeBody[i + 1] = { ...snakeBody[i] };
@@ -23,14 +24,64 @@ export function update() {
     snakeBody[0].y += inputDir.y;
 }
 
+function getHeadFacingDirection() {
+    if (inputDir.x > 0) {
+        return "right";
+    } else if (inputDir.x < 0) {
+        return "left";
+    } else if (inputDir.y < 0) {
+        return "up";
+    } else if (inputDir.y > 0) {
+        return "down";
+    } else {
+        return "up";
+    }
+}
+
+function getTailFacingDirection(tail, neighbour) {
+    let delta_x = tail.x - neighbour.x;
+    let delta_y = tail.y - neighbour.y;
+
+    if (delta_x < 0) {
+        return "right";
+    } else if (delta_x > 0) {
+        return "left";
+    } else if (delta_y > 0) {
+        return "up";
+    } else {
+        return "down";
+    }
+}
+
 export function draw(gameBoard) {
-    snakeBody.forEach((segment) => {
+    for (let i in snakeBody) {
+        i = parseFloat(i);
         const snakeElement = document.createElement("div");
-        snakeElement.style.gridRowStart = segment.y;
-        snakeElement.style.gridColumnStart = segment.x;
-        snakeElement.classList.add("snake");
+        snakeElement.style.gridRowStart = snakeBody[i].y;
+        snakeElement.style.gridColumnStart = snakeBody[i].x;
+        if (i === 0) {
+            let facingDir = getHeadFacingDirection();
+            snakeElement.classList.add(`head-${facingDir}`);
+        } else if (i === snakeBody.length - 1) {
+            let facingDir = getTailFacingDirection(
+                snakeBody[i],
+                snakeBody[i - 1]
+            );
+            snakeElement.classList.add(`tail-${facingDir}`);
+        } else if (snakeBody[i] === snakeBody[i + 1]) {
+            let facingDir = getTailFacingDirection(
+                snakeBody[i],
+                snakeBody[i - 1]
+            );
+            snakeElement.classList.add(`tail-${facingDir}`);
+            gameBoard.appendChild(snakeElement);
+            break;
+        } else {
+            snakeElement.classList.add("snake");
+        }
+
         gameBoard.appendChild(snakeElement);
-    });
+    }
 }
 
 export function onSnake(item, { ignoreHead = false } = {}) {

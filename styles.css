@@ -55,29 +55,49 @@ input[type="range"] {
 
 .head-up {
     background-image: url("assets/head-up.png");
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .head-down {
-    background-image: url("assets/head-bottom.png");
-    background-size: contain;
-    background-position: center;
+    background-image: url("assets/head-down.png");
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .head-right {
     background-image: url("assets/head-right.png");
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .head-left {
     background-image: url("assets/head-left.png");
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tail-up {
+    background-image: url("assets/tail-up.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tail-down {
+    background-image: url("assets/tail-down.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tail-right {
+    background-image: url("assets/tail-right.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tail-left {
+    background-image: url("assets/tail-left.png");
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -88,34 +108,6 @@ input[type="range"] {
     background-repeat: no-repeat;
     transition: transform 0.9s ease-in-out;
     animation: pulsate 1.2s ease-in-out infinite;
-}
-
-.tail-up {
-    background-image: url("assets/tail-up.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.tail-down {
-    background-image: url("assets/tail-bottom.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.tail-right {
-    background-image: url("assets/tail-right.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.tail-left {
-    background-image: url("assets/tail-left.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 @keyframes pulsate {
