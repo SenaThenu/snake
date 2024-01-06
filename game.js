@@ -1,15 +1,19 @@
 import {
+    getSnakeHead,
+    resetSnakeBody,
+    snakeIntersection,
     update as snakeUpdate,
     draw as snakeDraw,
-    snakeIntersection,
-    getSnakeHead,
 } from "./snake.js";
 
-import { update as foodUpdate, draw as foodDraw } from "./food.js";
+import {
+    forceUpdateFoodPosition,
+    update as foodUpdate,
+    draw as foodDraw,
+} from "./food.js";
 
 import { outsideGrid, updateGridSize } from "./grid.js";
 
-// Main Game Variables
 let SNAKE_SPEED = 7; // how many squares the snake moves per second!
 let EXPANSION_RATE = 1; // how many squares the snake gains per food item!
 
@@ -38,9 +42,9 @@ const gameBoard = document.getElementById("game-board");
 function main(currentTime) {
     if (gameOver) {
         if (confirm("You Lost! Click OK to Restart!")) {
-            window.location.href = "/";
+            resetGame();
+            gameOver = false;
         }
-        return;
     }
 
     window.requestAnimationFrame(main);
@@ -69,4 +73,9 @@ function draw() {
 
 function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
+}
+
+function resetGame() {
+    resetSnakeBody();
+    forceUpdateFoodPosition();
 }

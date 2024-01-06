@@ -1,4 +1,4 @@
-import { getInputDirection } from "./input.js";
+import { getInputDirection, resetInputs } from "./input.js";
 
 let snakeBody = [{ x: 11, y: 11 }];
 let newSegments = 0;
@@ -107,8 +107,7 @@ export function snakeIntersection() {
 }
 
 export function resetSnakeBody() {
-    let gridSize = parseFloat(document.getElementById("grid-size").value);
-    console.log(gridSize);
+    let gridSize = parseFloat(document.getElementById("grid-size").value);  
     snakeBody = [{ x: (gridSize + 1) / 2, y: (gridSize + 1) / 2 }];
-    console.log(snakeBody);
+    resetInputs();
 }
