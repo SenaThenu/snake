@@ -3,6 +3,12 @@ import { randomGridPosition } from "./grid.js";
 
 let food = getRandomFoodPosition();
 
+// animation related stuff
+let animFrame = 0;
+let scaleFactor = 1; // Initial scale
+let easing = 0; // Easing variable
+const animationDuration = 7; // Animation duration in milliseconds
+
 export function update(expansion_rate) {
     if (onSnake(food)) {
         addSegments(expansion_rate);
@@ -15,6 +21,18 @@ export function draw(gameBoard) {
     foodElement.style.gridRowStart = food.y;
     foodElement.style.gridColumnStart = food.x;
     foodElement.classList.add("food");
+
+    animFrame += 1;
+
+    // Easing function based on ease-in-out (approximate)
+    easing = Math.sin((Math.PI * animFrame) / animationDuration);
+    scaleFactor = 1 + 0.15 * easing; // Adjust scaling amount as needed
+
+    if (animFrame < animationDuration) {
+        foodElement.style.transform = `scale(${scaleFactor})`;
+    } else {
+        animFrame = 0;
+    }
     gameBoard.appendChild(foodElement);
 }
 
