@@ -60,16 +60,21 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.logo img {
+    width: 20vw;
+    margin-bottom: 2vh;
+}
+
 .slider-container {
-    margin: 0.8rem;
+    margin: 0.8vw;
 }
 
 .slider-labels {
-    font-size: 95%;
+    font-size: 2vw;
 }
 
 .slider-value {
-    font-size: 95%;
+    font-size: 2vw;
 }
 
 input[type="range"] {
