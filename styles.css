@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
 :root {
-    --h1-font-size: 2.4rem;
-    --h2-font-size: 2rem;
-    --p-font-size: 1.4rem;
+    --h1-font-size: 2vw;
+    --h2-font-size: 1.8vw;
+    --p-font-size: 2vw;
 }
 
 *,
@@ -16,19 +16,30 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-evenly;
     margin: 0;
     background-image: url("assets/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#control-panel {
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hide {
+    display: none
+}
+
+.lights-off {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#side-pane {
     order: 1;
     display: flex;
     flex-direction: column;
@@ -53,9 +64,62 @@ body {
     margin: 0.8rem;
 }
 
+.slider-labels {
+    font-size: 95%;
+}
+
+.slider-value {
+    font-size: 95%;
+}
+
 input[type="range"] {
     display: block;
-    width: 18rem;
+    width: 20vw;
+}
+
+.game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.game-over-panel {
+    display: block;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+.game-over-content {
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-over-content h1 {
+    color: aliceblue;
+    font-size: 4vw;
+    margin-bottom: 3vw;
+}
+
+.restart {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.restart img {
+    width: 10vw;
+    height: 10vw;
 }
 
 .snake {

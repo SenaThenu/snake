@@ -10,21 +10,34 @@
 </head>
 
 <body>
-    <div id="game-board"></div>
-    <div id="control-panel">
-        <div class="slider-container">
-            <label class="slider-labels" for="snake-speed">Snake Speed: <span class="slider-value">7</span></label>
-            <input type="range" id="snake-speed" min="7" max="300" value="7" class="slider">
-        </div>
+    <div class="main-container">
+        <div id="game-board"></div>
+        <div id="side-pane">
+            <div class="slider-container">
+                <label class="slider-labels" for="snake-speed">Snake Speed: <span class="slider-value">7</span></label>
+                <input type="range" id="snake-speed" min="7" max="300" value="7" class="slider">
+            </div>
 
-        <div class="slider-container">
-            <label class="slider-labels" for="expansion-rate">Expansion Rate: <span class="slider-value">1</span></label>
-            <input type="range" id="expansion-rate" min="1" max="100" value="1" class="slider">
-        </div>
+            <div class="slider-container">
+                <label class="slider-labels" for="expansion-rate">Expansion Rate: <span class="slider-value">1</span></label>
+                <input type="range" id="expansion-rate" min="1" max="100" value="1" class="slider">
+            </div>
 
-        <div class="slider-container">
-            <label class="slider-labels" for="grid-size">Grid Size: <span class="slider-value">21</span></label>
-            <input type="range" id="grid-size" min="13" max="101" value="21" step="2" class="slider">
+            <div class="slider-container">
+                <label class="slider-labels" for="grid-size">Grid Size: <span class="slider-value">21</span></label>
+                <input type="range" id="grid-size" min="13" max="101" value="21" step="2" class="slider">
+            </div>
+        </div>
+    </div>
+    <div class="game-over hide">
+        <img src="assets/game-over-panel.png" alt="Game Over Panel" class="game-over-panel">
+        <div class="game-over-content">
+            <div>
+                <h1>Game Over!</h1>
+            </div>
+            <div>
+                <button type="button" class="restart"><img src="assets/restart.png" alt="Restart Button"></button>
+            </div>
         </div>
     </div>
 </body>
