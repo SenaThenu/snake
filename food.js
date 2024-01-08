@@ -16,13 +16,13 @@ export function update(expansion_rate) {
     }
 }
 
-export function draw(gameBoard) {
+export function draw(gameBoard, snakeSpeed) {
     const foodElement = document.createElement("div");
     foodElement.style.gridRowStart = food.y;
     foodElement.style.gridColumnStart = food.x;
     foodElement.classList.add("food");
 
-    animFrame += 1;
+    animFrame += animationDuration / snakeSpeed;
 
     // Easing function based on ease-in-out (approximate)
     easing = Math.sin((Math.PI * animFrame) / animationDuration);

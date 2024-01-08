@@ -107,7 +107,7 @@ export function snakeIntersection() {
 }
 
 export function resetSnakeBody() {
-    let gridSize = parseFloat(document.getElementById("grid-size").value);  
+    let gridSize = parseFloat(document.getElementById("grid-size").value);
     snakeBody = [{ x: (gridSize + 1) / 2, y: (gridSize + 1) / 2 }];
     resetInputs();
 }
