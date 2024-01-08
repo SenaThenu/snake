@@ -11,7 +11,7 @@
 *::before {
     font-family: 'Bubblegum Sans', sans-serif;
     margin: 0px;
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 
@@ -23,7 +23,9 @@ body {
     align-items: center;
     justify-content: space-evenly;
     margin: 0;
-    background-color: black;
+    background-image: url("assets/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #control-panel {
@@ -31,20 +33,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #game-board {
     height: 100vmin;
     width: 100vmin;
-    background-color: #ccc;
     order: 2;
     display: grid;
     grid-template-columns: repeat(21, auto);
     grid-template-rows: repeat(21, auto);
+    background-image: url("assets/gameboard.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-container {
+    margin: 0.8rem;
 }
 
 input[type="range"] {
-    width: 100%;
+    display: block;
+    width: 18rem;
 }
 
 .snake {
