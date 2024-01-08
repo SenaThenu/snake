@@ -5,8 +5,8 @@ let GRID_SIZE = 21;
 
 export function randomGridPosition() {
     return {
-        x: Math.round(Math.random() * GRID_SIZE),
-        y: Math.round(Math.random() * GRID_SIZE),
+        x: Math.floor(Math.random() * (GRID_SIZE - 2)) + 2,
+        y: Math.floor(Math.random() * (GRID_SIZE - 2)) + 2,
     };
 }
 
