@@ -37,24 +37,37 @@ Array.from(sliders).forEach((slider, index) => {
 
 let lastRenderTime = 0;
 let gameOver = false;
+
+// dealing with game restarting
+const restart = document.getElementById("restart");
+restart.addEventListener("click", () => {
+    resetGame();
+});
+
+window.addEventListener("keydown", (e) => {
+    switch (e.key) {
+        case "Enter":
+            if (gameOver) {
+                resetGame();
+            }
+    }
+});
+
 const gameBoard = document.getElementById("game-board");
 
 function main(currentTime) {
-    if (gameOver) {
-        if (confirm("You Lost! Click OK to Restart!")) {
-            resetGame();
-            gameOver = false;
-        }
-    }
-
     window.requestAnimationFrame(main);
-    let delta = (currentTime - lastRenderTime) / 1000;
-    if (delta < 1 / SNAKE_SPEED) return;
+    if (gameOver) {
+        displayGameOver();
+    } else {
+        let delta = (currentTime - lastRenderTime) / 1000;
+        if (delta < 1 / SNAKE_SPEED) return;
 
-    lastRenderTime = currentTime;
+        lastRenderTime = currentTime;
 
-    update();
-    draw();
+        update();
+        draw();
+    }
 }
 
 window.requestAnimationFrame(main);
@@ -76,6 +89,16 @@ function checkDeath() {
 }
 
 function resetGame() {
+    gameOver = false;
+
+    let gameOverPane = document.getElementById("game-over-pane");
+    gameOverPane.classList.add("hide");
+
     resetSnakeBody();
     forceUpdateFoodPosition();
+}
+
+function displayGameOver() {
+    let gameOverPane = document.getElementById("game-over-pane");
+    gameOverPane.classList.remove("hide");
 }
