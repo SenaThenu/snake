@@ -76,6 +76,48 @@ export function draw(gameBoard) {
             snakeElement.classList.add(`tail-${facingDir}`);
             gameBoard.appendChild(snakeElement);
             break;
+        } else if (
+            snakeBody[i - 1].x !== snakeBody[i + 1].x &&
+            snakeBody[i - 1].y !== snakeBody[i + 1].y
+        ) {
+            let prevSegment = snakeBody[i - 1];
+            let nextSegment = snakeBody[i + 1];
+
+            let delta_x = prevSegment.x - nextSegment.x; // + means right & - means left
+            let delta_y = prevSegment.y - nextSegment.y; // + means down & - means up
+
+            // for adjacent differences, we are focusing on previous and current segments
+            let adj_delta_y = prevSegment.y - snakeBody[i].y;
+
+            if (delta_x > 0) {
+                if (delta_y > 0) {
+                    if (adj_delta_y === 0) {
+                        snakeElement.classList.add("corner-bottom-left");
+                    } else {
+                        snakeElement.classList.add("corner-top-right");
+                    }
+                } else {
+                    if (adj_delta_y === 0) {
+                        snakeElement.classList.add("corner-top-left");
+                    } else {
+                        snakeElement.classList.add("corner-bottom-right");
+                    }
+                }
+            } else {
+                if (delta_y > 0) {
+                    if (adj_delta_y === 0) {
+                        snakeElement.classList.add("corner-bottom-right");
+                    } else {
+                        snakeElement.classList.add("corner-top-left");
+                    }
+                } else {
+                    if (adj_delta_y === 0) {
+                        snakeElement.classList.add("corner-top-right");
+                    } else {
+                        snakeElement.classList.add("corner-bottom-left");
+                    }
+                }
+            }
         } else {
             snakeElement.classList.add("snake");
         }

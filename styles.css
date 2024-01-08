@@ -101,6 +101,30 @@ input[type="range"] {
     background-repeat: no-repeat;
 }
 
+.corner-top-left {
+    background-image: url("assets/corner-top-left.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.corner-top-right {
+    background-image: url("assets/corner-top-right.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.corner-bottom-left {
+    background-image: url("assets/corner-bottom-left.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.corner-bottom-right {
+    background-image: url("assets/corner-bottom-right.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .food {
     background-image: url("assets/food.png");
     background-size: contain;
