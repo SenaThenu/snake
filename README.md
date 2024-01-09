@@ -4,11 +4,8 @@
 <div align="center">
   <!-- PROJECT LOGO -->
   <a href="https://github.com/SenaThenu/snake">
-    <img src="https://github.com/SenaThenu/snake/blob/main/readme-assets/logo.png" alt="Logo" height="250">
+    <img src="https://github.com/SenaThenu/snake/blob/main/readme-assets/logo.png" alt="Logo" height="150">
   </a>
-
-  <!-- PROJECT TITLE -->
-  <h3 align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel and places/Rocket.png" alt="Rocket" width="25" height="25" /> Snake <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel and places/Rocket.png" alt="Rocket" width="25" height="25" /></h3>
 
   <!-- Project Description -->
   <p align="center">
@@ -54,9 +51,7 @@
 
 ### Built With 🔧
 
-<img src="https://img.shields.io/badge/JavaScript-f7df1d?style=for-the-badge&logo=javascript&logoColor=000" alt="JavaScript"> 
-<img src="https://img.shields.io/badge/CSS-006bc0?style=for-the-badge&logo=css3&logoColor=fff" alt="CSS">
-<img src="https://img.shields.io/badge/HTML-dd4b25?style=for-the-badge&logo=html5&logoColor=fff" alt="HTML">
+<img src="https://img.shields.io/badge/JavaScript-f7df1d?style=for-the-badge&logo=javascript&logoColor=000" alt="JavaScript"> <img src="https://img.shields.io/badge/CSS-006bc0?style=for-the-badge&logo=css3&logoColor=fff" alt="CSS"> <img src="https://img.shields.io/badge/HTML-dd4b25?style=for-the-badge&logo=html5&logoColor=fff" alt="HTML">
 
 <p align="right"><a href="#readme-top">Jump to Top<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand gestures/Index Pointing Up.png" alt="Pointing Up" width="25" height="25" /></a></p>
 
