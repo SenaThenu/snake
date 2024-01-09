@@ -45,7 +45,7 @@
 
 ## Project Preview 📖
 
-[![Product Screenshot][https://github.com/SenaThenu/snake/blob/main/readme-assets/preview.png]](https://senathenu.github.io/snake)
+[![Product Screenshot](https://github.com/SenaThenu/snake/blob/main/readme-assets/preview.png)](https://senathenu.github.io/snake)
 
 <p align="right"><a href="#readme-top">Jump to Top<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand gestures/Index Pointing Up.png" alt="Pointing Up" width="25" height="25" /></a></p>
 
@@ -53,11 +53,11 @@
 
 <img src="https://img.shields.io/badge/JavaScript-f7df1d?style=for-the-badge&logo=javascript&logoColor=000" alt="JavaScript"> <img src="https://img.shields.io/badge/CSS-006bc0?style=for-the-badge&logo=css3&logoColor=fff" alt="CSS"> <img src="https://img.shields.io/badge/HTML-dd4b25?style=for-the-badge&logo=html5&logoColor=fff" alt="HTML">
 
-<p align="right"><a href="#readme-top">Jump to Top<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand gestures/Index Pointing Up.png" alt="Pointing Up" width="25" height="25" /></a></p>
-
 > \[!IMPORTANT]
 >
 > <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="20" height="20" /> **Star Us** to receive the latest updates of this project from GitHub!
+
+<p align="right"><a href="#readme-top">Jump to Top<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand gestures/Index Pointing Up.png" alt="Pointing Up" width="25" height="25" /></a></p>
 
 <!-- CONTRIBUTING -->
 ## Contributing 👋
