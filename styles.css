@@ -78,6 +78,23 @@ input[type="range"] {
     width: 20vw;
 }
 
+.repo-link {
+    height: 5vmin;
+}
+
+.repo-link a {
+    font-weight: lighter;
+    font-size: 0.7em;
+    color: #14539a;
+    text-decoration: none;
+}
+
+.repo-link img {
+    margin-left: 0.5vmin;
+    height: 100%;
+    transform: translateY(25%);
+}
+
 .game-over {
     position: fixed;
     top: 50%;
